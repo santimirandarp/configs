@@ -7,3 +7,4 @@ rsync -r ../wallpaper wallpaper
 rsync -r ../.config/awesome/ .config/awesome
 rsync ../.config/alacritty.yml .config/alacritty.yml
 rsync ../Documents/documents/md/linux/installedSoftware installed.md
+rsync /etc/netplan/simple.yaml ./netplan/simple.yaml

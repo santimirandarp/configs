@@ -61,9 +61,9 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- default apps to launch using keybindings
 vscode = "/usr/bin/code"
-terminal = "/home/santi/.cargo/bin/alacritty"
+terminal = "/home/sm/.cargo/bin/alacritty"
 browser = "/usr/bin/firefox"
-editor = "/usr/bin/nvim -u vimrc"
+editor = "/usr/bin/vim"
 editor_cmd = terminal .. " -e " .. editor
 net_wireless = net_widgets.wireless({interface="wlp1s0"})
 

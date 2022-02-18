@@ -1,5 +1,5 @@
 # Let NetworkManager manage all devices on this system
-# no, let netword do it cuz NM troubles this pc
+# no cause it is massive shit. use networkd 
 network:
   version: 2
   renderer: networkd
@@ -8,5 +8,4 @@ network:
       dhcp4: true
       access-points:
         "OBT For Small Biz_JMTA":
-          password: "rh6haeXX"
-
+          password: rh6haeXX

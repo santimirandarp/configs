@@ -8,7 +8,7 @@ rsync "$HOME"/.bash_aliases "${THIS}"/.bash_aliases
 #sync wallpapers/
 rsync -r "$HOME"/wallpaper/ "${THIS}"/wallpaper # wallpaper/ == contents
 #sync awesome/
-rsync -r "$HOME"/.config/awesome/ "${THIS}"/.config/awesome
+rsync -r "$HOME"/.config/awesome/ "${THIS}"/.config/awesome/
 # sync alacritty terminal emulator config
 rsync "$HOME"/.config/alacritty.yml "${THIS}"/.config/alacritty.yml
 # sync all the installed software for resetting system

@@ -1,4 +1,4 @@
-#/bin/env bash
+#!/bin/env bash
 # this directory
 THIS="${HOME}"/clones/configs
 # sync vimrc
@@ -6,7 +6,7 @@ rsync "${HOME}"/.vimrc "${THIS}"/.vimrc
 # sync bash aliases
 rsync "$HOME"/.bash_aliases "${THIS}"/.bash_aliases
 #sync wallpapers/
-rsync -r "$HOME"/wallpaper/ "${THIS}"/wallpaper # wallpaper/ == contents
+rsync -r "$HOME"/wallpaper/ "${THIS}"/wallpaper/ # wallpaper/ == contents
 #sync awesome/
 rsync -r "$HOME"/.config/awesome/ "${THIS}"/.config/awesome/
 # sync alacritty terminal emulator config

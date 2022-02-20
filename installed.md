@@ -6,7 +6,7 @@ net-tools nmap gparted htop \
 mpv cmus \
 git vim-gtk3 \
 wmctrl \
-awesome \
+awesome compton \
 feh ffmpeg \
 weechat \
 xclip curl\

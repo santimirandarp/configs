@@ -1,8 +1,9 @@
 #!/bin/env bash
 # this directory
 THIS="${HOME}"/clones/configs
-# sync vimrc
+# sync vimrc, and vim directory (plugins)
 rsync "${HOME}"/.vimrc "${THIS}"/.vimrc
+rsync "${HOME}"/.vim/ "${THIS}"/.vim/
 # sync bash aliases
 rsync "$HOME"/.bash_aliases "${THIS}"/.bash_aliases
 #sync wallpapers/

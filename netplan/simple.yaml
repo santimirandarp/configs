@@ -9,3 +9,5 @@ network:
       access-points:
         "OBT For Small Biz_JMTA":
           password: rh6haeXX
+        #"LG-M250_5311":
+        # password: Linda123

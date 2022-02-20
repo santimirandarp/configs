@@ -3,6 +3,8 @@ alias configs="cd ~/clones/configs/"
 alias linux="cd ~/clones/documents/md/linux"
 alias varian="cd ~/clones/varian-converter"
 alias awesome="cd ~/.config/awesome"
+alias edAw="vim ~/.config/awesome/rc.lua"
+alias edAl="vim ~/.config/alacritty.yml"
 
 # git
 alias gs="git status"

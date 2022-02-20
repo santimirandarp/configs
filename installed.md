@@ -2,8 +2,8 @@
 ```
 #!/bin/env bash
 sudo apt-get install w3m pandoc \
-net-tools nmap gparted \
-htop mpv \
+net-tools nmap gparted htop \
+mpv cmus \
 git vim-gtk3 \
 wmctrl \
 awesome \

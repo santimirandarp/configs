@@ -1,11 +1,17 @@
 #/bin/env bash
-# I have all configuration stuff in this folder
-# synced with the specific file or directory.
-# after clonning they sould be placed back in the source directory
-rsync "$HOME"/.vimrc .vimrc
-rsync "$HOME"/.bash_aliases .bash_aliases
-rsync -r "$HOME"/wallpaper/ wallpaper # **contents** of wallpaper into wallpaper
-rsync -r "$HOME"/.config/awesome/ .config/awesome
-rsync "$HOME"/.config/alacritty.yml .config/alacritty.yml
-rsync "$HOME"/clones/documents/md/linux/installedSoftware installed.md
-rsync /etc/netplan/simple.yaml ./netplan/simple.yaml
+# this directory
+THIS="${HOME}"/clones/configs
+# sync vimrc
+rsync "${HOME}"/.vimrc "${THIS}"/.vimrc
+# sync bash aliases
+rsync "$HOME"/.bash_aliases "${THIS}"/.bash_aliases
+#sync wallpapers/
+rsync -r "$HOME"/wallpaper/ "${THIS}"/wallpaper # wallpaper/ == contents
+#sync awesome/
+rsync -r "$HOME"/.config/awesome/ "${THIS}"/.config/awesome
+# sync alacritty terminal emulator config
+rsync "$HOME"/.config/alacritty.yml "${THIS}"/.config/alacritty.yml
+# sync all the installed software for resetting system
+rsync "$HOME"/clones/documents/md/linux/installedSoftware "${THIS}"/installed.md
+# sync netplan basic config. Uses networkd, which needs wpa_supplicant installed.
+rsync /etc/netplan/simple.yaml "${THIS}"/netplan/simple.yaml

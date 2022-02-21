@@ -1,15 +1,13 @@
 # Software I like
 ```
 #!/bin/env bash
-sudo apt-get install w3m pandoc \
-net-tools nmap gparted htop \
+sudo apt-get install w3m \
+net-tools nmap gparted htop tree\
 mpv cmus \
 git vim-gtk3 \
-wmctrl \
-awesome compton \
-feh ffmpeg \
-weechat \
-xclip curl\
+wmctrl awesome compton \
+feh weechat pandoc  \
+xffmpeg clip curl\
 cargo cmake \
 cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3 \
 cargo install alacritty exa
@@ -25,6 +23,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 npm i typedoc typescript nodemon -g
 ```
 * alacritty: cool terminal emulator
+* tree is a fantastic tool for showing up the three structure of a dir.
 * exa: will replace `ls` (.cargo/bin needs to be 
 added to the path).
 * Lynx & w3m: console browsers

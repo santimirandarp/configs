@@ -45,3 +45,6 @@ set number	" Show line numbers
 " Window appears if make has any error
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
+
+" Bell
+set belloff=all

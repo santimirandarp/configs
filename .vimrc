@@ -48,3 +48,6 @@ autocmd QuickFixCmdPost    l* nested lwindow
 
 " Bell
 set belloff=all
+
+" for prettier
+packloadall

@@ -3,6 +3,7 @@
 #!/bin/env bash
 sudo apt-get install w3m \
 net-tools nmap gparted htop tree\
+mlocate tldr\
 mpv cmus \
 git vim-gtk3 \
 wmctrl awesome compton \
@@ -60,6 +61,8 @@ Download Montserrat and Inconsolata from google fonts, and put them into `/usr/s
 
 Obviously the Awesome `rc.lua` has to be modified.
 And that is it. Just restart Awesome  using `Ctrl+Shift+R`.
+
+## Vim Plugins
 
 ## Not in the official repositories
 * VSCode and extensions: ESLint, Jest, Prettier, Liveserver, Document This,...

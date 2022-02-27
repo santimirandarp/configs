@@ -51,3 +51,7 @@ set belloff=all
 
 " for prettier
 packloadall
+
+" typescript compiler options
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''

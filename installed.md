@@ -21,7 +21,7 @@ cargo install alacritty exa
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash        
 
 #some npm packages
-npm i typedoc typescript nodemon -g
+npm i typedoc typescript nodemon npm-check-updates -g
 ```
 * alacritty: cool terminal emulator
 * tree is a fantastic tool for showing up the three structure of a dir.
@@ -63,9 +63,18 @@ Obviously the Awesome `rc.lua` has to be modified.
 And that is it. Just restart Awesome  using `Ctrl+Shift+R`.
 
 ## Vim Plugins
+```
+# typescript
+git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/pack/typescript/start/typescript-vim
+# commentary
+mkdir -p ~/.vim/pack/tpope/start
+cd ~/.vim/pack/tpope/start
+git clone https://tpope.io/vim/commentary.git
+vim -u NONE -c "helptags commentary/doc" -c q
+#
+```
 
 ## Not in the official repositories
 * VSCode and extensions: ESLint, Jest, Prettier, Liveserver, Document This,...
 * Mozilla VPN
 
-[configs]:https://github.com/santimirandarp/configs

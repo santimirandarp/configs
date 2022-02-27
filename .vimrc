@@ -54,4 +54,4 @@ packloadall
 
 " typescript compiler options
 let g:typescript_compiler_binary = 'tsc'
-let g:typescript_compiler_options = ''
+let g:typescript_compiler_options = '-p ./tsconfig.json --pretty --noEmit --allowJs --checkJs'

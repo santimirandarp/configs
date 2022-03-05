@@ -3,7 +3,7 @@ window:
   # by DPI and the specified value is always added at both opposing sides.
   padding:
     x: 2
-    y: 0
+    y: 5
 
   # Window decorations
   #     - full: Borders and title bar

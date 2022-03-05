@@ -5,7 +5,6 @@ alias linux="cd ${CLONES}/documents/md/linux"
 alias varian="cd ${CLONES}/varian-converter"
 alias testing="cd ${CLONES}/testing/varian-converter"
 
-alias awesome="cd ~/.config/awesome"
 alias edAw="vim ~/.config/awesome/rc.lua"
 alias edAl="vim ~/.config/alacritty.yml"
 

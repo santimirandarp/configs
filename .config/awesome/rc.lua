@@ -93,7 +93,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Each screen has its own tag table.
     --just copy and paste the Unicode 'image', otherwise is converted to string (you would need
     --to import a fn to to string.toUnicodeChar() or something like that...
-    awful.tag({ "1", "2", "3", "4", "5" }, s, awful.layout.layouts[1])
+    awful.tag({ "code", "web", "3", "chat", "read" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()

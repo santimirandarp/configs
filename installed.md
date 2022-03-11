@@ -43,7 +43,7 @@ added to the path).
 I had troubles with the brightness in Awesome, so I downloaded the xfce power management and worked great, you can now modify brightness using F11 and F12. 
 
 ```
-sudo apt-get install xfce4-power-management
+sudo apt-get install xfce4-power-manager
 ```
 
 ## Awesome WM

@@ -2,17 +2,18 @@
 ```
 #!/bin/env bash
 sudo apt-get install w3m \
-net-tools nmap gparted htop tree\
-mlocate tldr\
+net-tools nmap gparted \
+mlocate tldr htop tree \
 mpv cmus \
 git vim-gtk3 \
 wmctrl awesome compton \
 feh weechat pandoc  \
-xffmpeg clip curl\
-cargo cmake \
-cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3 \
+ffmpeg xclip curl \
+cargo cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+```
+Once we got that
+```
 cargo install alacritty exa
-
 # raspberry pi imager
 # sudo snap install rpi-imager this will cause thoubles, install
 # downloading the .deb package from the website, and runs perfect.
@@ -42,7 +43,7 @@ added to the path).
 I had troubles with the brightness in Awesome, so I downloaded the xfce power management and worked great, you can now modify brightness using F11 and F12. 
 
 ```
-sudo apt-get install xfce4-power-management
+sudo apt-get install xfce4-power-manager
 ```
 
 ## Awesome WM

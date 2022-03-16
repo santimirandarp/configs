@@ -3,7 +3,7 @@
 THIS="${HOME}"/clones/configs
 # sync vimrc, and vim directory (plugins)
 rsync "${HOME}"/.vimrc "${THIS}"/.vimrc
-rsync "${HOME}"/.vim/ "${THIS}"/.vim/
+rsync -r "${HOME}"/.vim/ "${THIS}"/.vim/
 # sync bash aliases
 rsync "$HOME"/.bash_aliases "${THIS}"/.bash_aliases
 #sync wallpapers/
@@ -15,6 +15,6 @@ rsync -r "$HOME"/.config/polybar/ "${THIS}"/.config/polybar/
 # sync alacritty terminal emulator config
 rsync "$HOME"/.config/alacritty.yml "${THIS}"/.config/alacritty.yml
 # sync all the installed software for resetting system
-rsync "$HOME"/clones/documents/md/linux/installedSoftware "${THIS}"/installed.md
+rsync "$HOME"/clones/documents/md/linux/installedSoftware.md "${THIS}"/installed.md
 # sync netplan basic config. Uses networkd, which needs wpa_supplicant installed.
-rsync /etc/netplan/simple.yaml "${THIS}"/netplan/simple.yaml
+rsync -r /etc/netplan/ "${THIS}"/netplan/

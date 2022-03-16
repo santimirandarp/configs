@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/sm/clones/minsky/client/node_modules'
+let g:netrw_dirhist_2='/home/sm/clones/documents/md/informationSecurity'
+let g:netrw_dirhist_1='/home/sm/.config/awesome'

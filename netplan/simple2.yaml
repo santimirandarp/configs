@@ -1,0 +1,12 @@
+# Let NetworkManager manage all devices on this system
+# no cause it is massive shit. use networkd 
+#network:
+#  version: 2
+#  renderer: networkd
+#  wifis:
+#    wlp1s0:
+#      dhcp4: true
+#      access-points:
+#        "OBT For Small Biz_JMTA":
+#          password: rh6haeXX
+#

@@ -17,15 +17,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
-
--- Widget for the battery, loaded in mytasklist
-local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
--- Widget for the cpu stats, loaded in mytasklist
-local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
--- Widget for alternative to nm-applet after switching to networkd from NetworkManager
-local net_widgets = require("net_widgets")
--- some others are after variable definitions
-
+--
 -- Load Debian menu entries
 local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
@@ -65,7 +57,6 @@ terminal = "/home/sm/.cargo/bin/alacritty"
 browser = "/usr/bin/firefox"
 editor = "/usr/bin/vim"
 editor_cmd = terminal .. " -e " .. editor
-net_wireless = net_widgets.wireless({interface="wlp1s0"})
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -88,12 +79,76 @@ awful.layout.layouts = {
 }
 -- }}}
 
+-- {{{ Menu
+-- Create a launcher widget and a main menu
+myawesomemenu = {
+   { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
+   { "manual", terminal .. " -e man awesome" },
+   { "edit config", editor_cmd .. " " .. awesome.conffile },
+   { "restart", awesome.restart },
+   { "quit", function() awesome.quit() end },
+}
+
+
+mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
+                                     menu = mymainmenu })
+
+-- Menubar configuration
+menubar.utils.terminal = terminal -- Set the terminal for applications that require it
+-- }}}
+
+-- Keyboard map indicator and switcher
+mykeyboardlayout = awful.widget.keyboardlayout()
+
+-- {{{ Wibar
+
+-- Create a wibox for each screen and add it
+local taglist_buttons = gears.table.join(
+                    awful.button({ }, 1, function(t) t:view_only() end),
+                    awful.button({ modkey }, 1, function(t)
+                                              if client.focus then
+                                                  client.focus:move_to_tag(t)
+                                              end
+                                          end),
+                    awful.button({ }, 3, awful.tag.viewtoggle),
+                    awful.button({ modkey }, 3, function(t)
+                                              if client.focus then
+                                                  client.focus:toggle_tag(t)
+                                              end
+                                          end),
+                    awful.button({ }, 4, function(t) awful.tag.viewnext(t.screen) end),
+                    awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
+                )
+
+local tasklist_buttons = gears.table.join(
+                     awful.button({ }, 1, function (c)
+                                              if c == client.focus then
+                                                  c.minimized = true
+                                              else
+                                                  c:emit_signal(
+                                                      "request::activate",
+                                                      "tasklist",
+                                                      {raise = true}
+                                                  )
+                                              end
+                                          end),
+                     awful.button({ }, 3, function()
+                                              awful.menu.client_list({ theme = { width = 250 } })
+                                          end),
+                     awful.button({ }, 4, function ()
+                                              awful.client.focus.byidx(1)
+                                          end),
+                     awful.button({ }, 5, function ()
+                                              awful.client.focus.byidx(-1) 
+                                              end))
 
 awful.screen.connect_for_each_screen(function(s)
+    -- Wallpaper
+
     -- Each screen has its own tag table.
     --just copy and paste the Unicode 'image', otherwise is converted to string (you would need
     --to import a fn to to string.toUnicodeChar() or something like that...
-    awful.tag({ "code", "web", "3", "chat", "read" }, s, awful.layout.layouts[1])
+    awful.tag({ "code", "ffox", "forum", "music"}, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -112,6 +167,12 @@ awful.screen.connect_for_each_screen(function(s)
         buttons = taglist_buttons
     }
 
+    -- Create a tasklist widget
+    s.mytasklist = awful.widget.tasklist {
+       screen  = s,
+        filter  = awful.widget.tasklist.filter.currenttags,
+        buttons = tasklist_buttons
+    }
 end)
 -- }}}
 

@@ -3,13 +3,18 @@ set linebreak	" Break lines at word (requires Wrap lines)
 set textwidth=100	" Line wrap (number of cols)
 set showmatch	" Highlight matching brace
 "set visualbell	" Use visual bell (no beeping)
+set nocompatible " no comp w vi
+syntax enable " enable syntax hl
+filetype plugin on " for syntaxes also
 
+" Search
 set hlsearch	" Highlight all search results
 set smartcase	" Enable smart-case search
 set ignorecase	" Always case-insensitive
 set incsearch	" Searches for strings incrementally
 
-set autoindent	" Auto-indent new lines
+" Indent
+" set autoindent	" Auto-indent new lines
 set expandtab	" Use spaces instead of tabs
 set shiftwidth=2	" Number of auto-indent spaces
 set smartindent	" Enable smart-indent
@@ -23,10 +28,9 @@ set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
 
 " omnicompletion
-filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-" searches recursively by default
+" Search into subfolders using gf, :find name<Tab>, etc
 set path+=**
 " ignores nm
 set wildignore+=**/node_modules/** 
@@ -54,4 +58,4 @@ packloadall
 
 " typescript compiler options
 let g:typescript_compiler_binary = 'tsc'
-let g:typescript_compiler_options = '-p ./tsconfig.json --pretty --noEmit --allowJs --checkJs'
+let g:typescript_compiler_options = ''

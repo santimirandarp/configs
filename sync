@@ -18,3 +18,5 @@ rsync "$HOME"/.config/alacritty.yml "${THIS}"/.config/alacritty.yml
 rsync "$HOME"/clones/documents/md/linux/installedSoftware.md "${THIS}"/installed.md
 # sync netplan basic config. Uses networkd, which needs wpa_supplicant installed.
 rsync -r /etc/netplan/ "${THIS}"/netplan/
+# sync own local scripts
+rsync "${HOME}"/.local/bin/* "${THIS}"/bin/ --exclude "node_modules"

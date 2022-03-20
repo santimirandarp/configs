@@ -12,6 +12,9 @@ alias edAl="vim ~/.config/alacritty.yml"
 alias b="cd .."
 alias bb="cd ../.."
 
+# web search
+alias ddg="w3m https://duckduckgo.com"
+
 # git
 alias gs="git status"
 alias ga="git add -A"
@@ -35,5 +38,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # EXPORTS
-export PATH="/home/sm/.cargo/bin:$PATH"
+export PATH="${HOME}/.cargo/bin:${HOME}/.local/bin/:$PATH"
 export EDITOR="/usr/bin/vim"
+
+# Welcome script
+node welcome

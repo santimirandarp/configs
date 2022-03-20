@@ -42,4 +42,4 @@ export PATH="${HOME}/.cargo/bin:${HOME}/.local/bin/:$PATH"
 export EDITOR="/usr/bin/vim"
 
 # Welcome script
-node welcome
+welcome.js

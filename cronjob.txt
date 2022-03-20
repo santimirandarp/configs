@@ -1,4 +1,4 @@
 # cronjob for syncing this dir
-0 * * * 1 /home/santi/clones/configs/sync
-0 * * * 1 git -C /home/santi/clones/configs add . && git -C /home/santi/clones/configs/ commit -m "synced"
+0 * * * 1 /home/sm/clones/configs/sync
+0 * * * 1 git -C /home/sm/clones/configs add . && git -C /home/sm/clones/configs/ commit -m "synced"
 

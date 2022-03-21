@@ -7,7 +7,9 @@ network:
     wlp1s0:
       dhcp4: true
       access-points:
-        "OBT For Small Biz_JMTA":
-          password: rh6haeXX
+        "iPhone":
+          "password": "Linda123"
+              #"OBT For Small Biz_JMTA":
+              #password: rh6haeXX
               #"santi":
               #password: "linda123"

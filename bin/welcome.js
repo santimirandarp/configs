@@ -6,7 +6,7 @@ const log = console.log;
 log(chalk.blue('Hello') + chalk.green(' Santi') + chalk.red('!'));
 
 const date = new Date()
-const [ year,month,day ] = [ date.getFullYear(),date.getMonth(),date.getDate() ]
+const [ year,month,day ] = [ date.getFullYear(),date.getMonth()+1,date.getDate() ]
 
 log(chalk.blue("day: "), `${day}/${month}/${year}`)
 

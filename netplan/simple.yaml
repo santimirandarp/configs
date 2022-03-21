@@ -8,7 +8,7 @@ network:
       dhcp4: true
       access-points:
         "iPhone":
-          "password": "Linda123"
+          "password": "linda123"
               #"OBT For Small Biz_JMTA":
               #password: rh6haeXX
               #"santi":

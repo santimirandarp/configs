@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/sm/clones/group-files/.github/workflows'
 let g:netrw_dirhist_7='/home/sm/clones/group-files/.git'
 let g:netrw_dirhist_6='/home/sm/clones/line-reader/.github/workflows'
 let g:netrw_dirhist_5='/home/sm/clones/minsky/modules'

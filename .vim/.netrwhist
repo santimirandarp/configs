@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/sm/clones/line-reader/.github/workflows'
 let g:netrw_dirhist_5='/home/sm/clones/minsky/modules'
 let g:netrw_dirhist_4='/home/sm/clones/readLine/src'
 let g:netrw_dirhist_3='/home/sm/clones/minsky/client/node_modules'

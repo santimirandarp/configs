@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =9
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/sm/clones/hacker/_layouts'
 let g:netrw_dirhist_9='/home/sm/clones/biologic-converter/src/mps/__tests__'
 let g:netrw_dirhist_8='/home/sm/clones/group-files/.github/workflows'
 let g:netrw_dirhist_7='/home/sm/clones/group-files/.git'

@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =0
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/sm/clones/documents/md/blogs'
 let g:netrw_dirhist_0='/home/sm/clones/hacker/_layouts'
 let g:netrw_dirhist_9='/home/sm/clones/biologic-converter/src/mps/__tests__'
 let g:netrw_dirhist_8='/home/sm/clones/group-files/.github/workflows'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_5='/home/sm/clones/minsky/modules'
 let g:netrw_dirhist_4='/home/sm/clones/readLine/src'
 let g:netrw_dirhist_3='/home/sm/clones/minsky/client/node_modules'
 let g:netrw_dirhist_2='/home/sm/clones/documents/md/informationSecurity'
-let g:netrw_dirhist_1='/home/sm/.config/awesome'

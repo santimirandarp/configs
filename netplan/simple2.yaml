@@ -7,7 +7,7 @@ network:
     wlp1s0:
       dhcp4: true
       access-points:
-        "OBT For Small Biz_JMTA":
-          password: rh6haeXX
+        "FRITZ!Box 7330 SL":
+          password: "05363154368845192426"
               #"iPhone":
               #password: linda123

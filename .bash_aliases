@@ -2,13 +2,6 @@
 CLONES="${HOME}/clones"
 alias configs="cd ${CLONES}/configs/"
 alias linux="cd ${CLONES}/documents/md/linux"
-alias varian="cd ${CLONES}/varian-converter"
-alias tests="cd ${CLONES}/biologic-converter/src/__tests__/"
-alias mps="cd ${CLONES}/biologic-converter/src/mps"
-alias mpt="cd ${CLONES}/biologic-converter/src/mpt"
-
-alias edAw="vim ~/.config/awesome/rc.lua"
-alias edAl="vim ~/.config/alacritty.yml"
 
 # cd aliases
 alias b="cd .."
@@ -40,7 +33,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # EXPORTS
-export PATH="${HOME}/.cargo/bin:${HOME}/.local/bin/:$PATH"
 export EDITOR="/usr/bin/vim"
 
 # Welcome script
